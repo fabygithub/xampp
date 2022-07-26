@@ -1,3 +1,45 @@
 XAMPP para Windows
 8.1.6 (PHP 8.1.6)
 
+carpeta donde se instala xammp
+C:\xampp
+
+la carpeta no esta vacia
+seleccionar otra carpeta
+
+mysql port
+3306
+
+ingresar la carpeta htdocs
+
+http://localhost/test2/
+
+
+login
+User Name is required
+
+Password is required
+usuario por defecto en xammp
+root
+root
+
+
+Failed to open stream:
+cambiar el nombre del archivo
+
+Uncaught mysqli_sql_exception: Unknown database
+
+C:\xampp\htdocs\test2\db_conn.php on line 9
+https://github.com/sourcecodeexamples/login-system-php-mysql
+
+
+
+
+
+
+
+
+
+
+
+
