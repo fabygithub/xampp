@@ -33,6 +33,90 @@ C:\xampp\htdocs\test2\db_conn.php on line 9
 https://github.com/sourcecodeexamples/login-system-php-mysql
 
 
+hay que crear la base de datos
+Use the below SQL script to create a database and table:
+
+CREATE DATABASE login_system;
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `users` (`id`, `user_name`, `password`, `name`) VALUES
+(1, 'admin', '123', 'admin'),
+(2, 'john', 'abc', 'John');
+
+se conecto a la base de datos
+ahora el error esta en lo siguiente
+
+Incorect User name or password
+How to Set /Change Password in XAMPP Server , MySQL
+
+nombre de usuario 
+root
+
+localhost
+editar privilegios
+cambiar password
+
+el problema es que no usa password
+Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) 
+
+
+phpMyAdmin intentó conectarse con el servidor MySQL, 
+y el servidor rechazó esta conexión. 
+Deberá revisar el host, nombre de usuario 
+y contraseña en config.inc.php y asegurarse 
+que corresponden con la información provista 
+por el administrador del servidor MySQL.
+
+
+carpeta phpmyadmin
+config.ing.php
+
+cambiar config 
+por cookie
+
+user root
+password root
+
+
+$cfg['Servers'][$i]['AllowNoPassword'] = false;
+
+reiniciar xammp
+ahora pide usuario 
+y contraseña
+
+
+Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO)
+
+
+Parse error: syntax error, unexpected token "=" 
+no se esperaba =
+esta demas
+
+
+Mysql_connect esta obsoleto, tienes que utilizar mysqli en su lugar:
+
+https://www.youtube.com/watch?v=GvXLUJAQwu4&ab_channel=UFDevelopers
+Connect PHP to MySql Database Using Wamp/Xampp Server
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
